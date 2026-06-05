@@ -1,0 +1,30 @@
+# ── Controle de versão ──
+.git
+.gitignore
+
+# ── Build local do Maven (não enviar ao Docker) ──
+target/
+
+# ── IDEs ──
+.idea/
+*.iml
+.vscode/
+*.classpath
+*.project
+.settings/
+
+# ── Arquivos de ambiente ──
+.env
+*.env
+
+# ── Sistema operacional ──
+.DS_Store
+Thumbs.db
+
+# ── Logs ──
+*.log
+logs/
+
+# ── Docker ──
+docker-compose*.yml
+Dockerfile*
