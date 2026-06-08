@@ -4,21 +4,16 @@ services:
     container_name: db-rm565049
     image: gvenzl/oracle-xe:21-slim
     restart: unless-stopped
-
     environment:
-      ORACLE_PASSWORD: ${ORACLE_PASSWORD:-030705}
-      APP_USER: ${ORACLE_USER:-rm565049}
-      APP_USER_PASSWORD: ${ORACLE_PASSWORD:-030705}
-
+      ORACLE_PASSWORD: ${ORACLE_PASSWORD}
+      APP_USER: ${ORACLE_USER}
+      APP_USER_PASSWORD: ${ORACLE_PASSWORD}
     ports:
       - "1521:1521"
-
     volumes:
       - oracle-data-rm565049:/opt/oracle/oradata
-
     networks:
       - orbitank-network
-
     healthcheck:
       test: ["CMD-SHELL", "healthcheck.sh"]
       interval: 30s
@@ -32,29 +27,26 @@ services:
       context: .
       dockerfile: Dockerfile
     image: orbitank-api:latest
+    pull_policy: build
     restart: unless-stopped
-
     depends_on:
       db-rm565049:
         condition: service_healthy
-
     environment:
-      PORT: ${PORT:-8080}
+      PORT: 8080
+      # Aqui dizemos para o Spring se conectar ao serviço do banco no Docker
       ORACLE_URL: jdbc:oracle:thin:@db-rm565049:1521/XEPDB1
-      ORACLE_USER: ${ORACLE_USER:-rm565049}
-      ORACLE_PASSWORD: ${ORACLE_PASSWORD:-030705}
-      MAIL_HOST: ${MAIL_HOST:-smtp.gmail.com}
-      MAIL_PORT: ${MAIL_PORT:-587}
+      ORACLE_USER: ${ORACLE_USER}
+      ORACLE_PASSWORD: ${ORACLE_PASSWORD}
+      MAIL_HOST: smtp.gmail.com
+      MAIL_PORT: 587
       MAIL_USERNAME: ${MAIL_USERNAME}
       MAIL_PASSWORD: ${MAIL_PASSWORD}
       MAIL_FROM: ${MAIL_FROM}
-
     ports:
       - "8080:8080"
-
     networks:
       - orbitank-network
-
     env_file:
       - .env
 
