@@ -1,29 +1,30 @@
-#How To
-#1. clonando a aplicacao
+##How To
+
+##1. clonando a aplicacao
 ```bash
 git clone https://github.com/BSLB-GS/Orbitank-DevOps-GS.git
 cd Orbitank
 ```
 
-#2. criar .env
+##2. criar .env
 cat << 'EOF' > .env
 INFORMAÇOES DO .env NO PDF DA ENTREGA
 EOF
 
-#3. rodar container
+##3. rodar container
 ```bash
 docker compose up -d
 ```
 
-#4. mostrar logs
+##4. mostrar logs
 ```bash
 docker compose logs
 ```
 
-#link do swagger
+##link do swagger
 http://191.238.209.110:8080/swagger-ui/index.html#
 
-#5. entrar no container da aplicacao
+##5. entrar no container da aplicacao
 ```bash
 docker container exec -it app-rm565049 sh
 
@@ -36,7 +37,7 @@ ls -l
 exit
 ```
 
-#6. entrar no container do banco
+##6. entrar no container do banco
 ```bash
 docker container exec -it db-rm565049 bash
 
@@ -49,7 +50,7 @@ ls -l
 exit
 ```
 
-#7. entrar no SQL plus
+##7. entrar no SQL plus
 ```bash
 docker container exec -it db-rm565049 sqlplus rm565049/030705@//localhost:1521/XEPDB1
 
