@@ -64,6 +64,8 @@ SELECT * FROM tb_operational_user;
 
 SELECT * FROM tb_audit_log;
 ```
+## Desenho Macro Da Solução
+![Uploading WhatsApp Image 2026-06-08 at 13.26.20.jpeg…]()
 
 
 
