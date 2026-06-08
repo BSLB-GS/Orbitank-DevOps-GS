@@ -65,7 +65,7 @@ SELECT * FROM tb_operational_user;
 SELECT * FROM tb_audit_log;
 ```
 ## Desenho Macro Da Solução
-
+<img width="1280" height="765" alt="WhatsApp Image 2026-06-08 at 13 26 20" src="https://github.com/user-attachments/assets/95f2b976-be32-40b0-a625-b0d2017a1993" />
 
 
 
