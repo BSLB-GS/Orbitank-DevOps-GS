@@ -7,9 +7,11 @@ cd Orbitank
 ```
 
 ## 2. criar .env
+```bash
 cat << 'EOF' > .env
 INFORMAÇOES DO .env NO PDF DA ENTREGA
 EOF
+```
 
 ## 3. rodar container
 ```bash
