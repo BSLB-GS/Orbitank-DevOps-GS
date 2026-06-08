@@ -58,7 +58,7 @@ docker container exec -it db-rm565049 sqlplus rm565049/030705@//localhost:1521/X
 
 SELECT * FROM tb_operational_user;
 
-SELECT * FROM tb_audit_log
+SELECT * FROM tb_audit_log;
 ```
 
 
