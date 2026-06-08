@@ -26,6 +26,10 @@ docker compose logs
 ## link do swagger
 http://191.238.209.110:8080/swagger-ui/index.html#
 
+## Autenticação:
+E-mail: admin@orbitank.com
+Senha: Orbitank2026!
+
 ## 5. entrar no container da aplicacao
 ```bash
 docker container exec -it app-rm565049 sh
