@@ -1,5 +1,5 @@
 ## How To
-
+## SE OS COMANDOS DOCKER NÃO ESTIVEREM FUNCIONANDO COLOQUE "sudo" ANTES DE CADA COMANDO!!
 ## 1. clonando a aplicacao
 ```bash
 git clone https://github.com/BSLB-GS/Orbitank-DevOps-GS.git
@@ -60,6 +60,8 @@ SELECT * FROM tb_operational_user;
 
 SELECT * FROM tb_audit_log
 ```
+
+
 
 
 # 🌕 Orbitank API
