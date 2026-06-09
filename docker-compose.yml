@@ -34,7 +34,7 @@ services:
         condition: service_healthy
     environment:
       PORT: 8080
-      # Aqui dizemos para o Spring se conectar ao serviço do banco no Docker
+      
       ORACLE_URL: jdbc:oracle:thin:@db-rm565049:1521/XEPDB1
       ORACLE_USER: ${ORACLE_USER}
       ORACLE_PASSWORD: ${ORACLE_PASSWORD}
